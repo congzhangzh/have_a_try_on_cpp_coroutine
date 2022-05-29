@@ -5,18 +5,39 @@ FROM debian:testing
 
 RUN apt update
 
-#NEED by bash shell
+#Need by bash shell
 RUN apt install lsb-release wget software-properties-common wget gnupg -y
 
-#install clang
+#Build essential
+RUN apt-get install -y ssh \
+    build-essential \
+    gcc \
+    g++ \
+    gdb \
+    clang \
+    cmake \
+    rsync \
+    tar \
+    python3 \
+    ninja-build \
+    gdbserver \
+    openssh-server
+
+#install clang latest
 RUN bash -c "$(wget -O - https://apt.llvm.org/llvm.sh)"
 
-#install others
-RUN apt install cmake gdb g++ -y
 
+RUN apt-get clean
 # Clean up packages.
-RUN  apt-get clean && \
-   rm -rf /var/lib/apt/lists/*
+#RUN  apt-get clean && \
+#   rm -rf /var/lib/apt/lists/*
 
-CMD ["/bin/bash"]
+
+RUN useradd -m user && yes password | passwd user
+
+# TODO, I do not fully understand here
+RUN systemd-tmpfiles --create && mkdir /run/sshd
+
+#CMD ["/bin/bash"]
+CMD ["/usr/sbin/sshd", "-D"]
 WORKDIR /work

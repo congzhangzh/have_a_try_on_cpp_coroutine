@@ -8,9 +8,15 @@ run and debug async_coroutine_example.cpp
 docker build -t debian_testing_with_latest_clang_and_gcc .
 ```
 
+# Clean host keys
+```bash
+ssh-keygen -f "$HOME/.ssh/known_hosts" -R "[localhost]:2222"
+```
+
 # Run Docker
 ```bash
-docker run -it --rm -v $PWD:/work  debian_testing_with_latest_clang_and_gcc
+#docker run -it --rm -v $PWD:/work  debian_testing_with_latest_clang_and_gcc
+docker run -it --rm -v $PWD:/work --cap-add sys_ptrace -p 127.0.0.1:2222:22 --name latest_cpp_dev debian_testing_with_latest_clang_and_gcc 
 ```
 
 # Compile it
@@ -23,11 +29,13 @@ clang++-14 -stdlib=libstdc++ -std=c++2b async_coroutine_example.cpp -lpthread
 ./a.out
 ```
 
-# Debug it?
+# Debug it
+
+Use Clion to Remote Toolchain to debug it 
 
 # A firendly way?
 
-Attach VS Code to you container?
+Attach VS Code to you container or by dev container?
 
 # Others
 ```bash
