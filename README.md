@@ -51,3 +51,6 @@ g++ --std=c++2b async_coroutine_example.cpp -fcoroutines
 5. https://docs.docker.com/engine/reference/commandline/container_inspect/
 6. https://askubuntu.com/questions/1110828/ssh-failed-to-start-missing-privilege-separation-directory-var-run-sshd
 7. https://github.com/JetBrains/clion-remote/blob/master/Dockerfile.remote-llvm-project-env
+8. https://microsoft.github.io/code-with-engineering-playbook/developer-experience/devcontainers/
+9. https://code.visualstudio.com/docs/remote/devcontainerjson-reference
+10. https://code.visualstudio.com/docs/cpp/launch-json-reference
