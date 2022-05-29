@@ -54,3 +54,8 @@ g++ --std=c++2b async_coroutine_example.cpp -fcoroutines
 8. https://microsoft.github.io/code-with-engineering-playbook/developer-experience/devcontainers/
 9. https://code.visualstudio.com/docs/remote/devcontainerjson-reference
 10. https://code.visualstudio.com/docs/cpp/launch-json-reference
+11. https://code.visualstudio.com/docs/cpp/enable-logging-cpp
+12. https://code.visualstudio.com/docs/cpp/cpp-debug
+13. https://code.visualstudio.com/docs/cpp/launch-json-reference
+14. https://stackoverflow.com/questions/49583381/how-to-debug-a-cmake-make-project-in-vscode
+15. https://vector-of-bool.github.io/docs/vscode-cmake-tools/debugging.html
