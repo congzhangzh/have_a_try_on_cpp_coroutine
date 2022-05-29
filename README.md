@@ -59,3 +59,4 @@ g++ --std=c++2b async_coroutine_example.cpp -fcoroutines
 13. https://code.visualstudio.com/docs/cpp/launch-json-reference
 14. https://stackoverflow.com/questions/49583381/how-to-debug-a-cmake-make-project-in-vscode
 15. https://vector-of-bool.github.io/docs/vscode-cmake-tools/debugging.html
+16. https://code.visualstudio.com/docs/cpp/faq-cpp#_how-do-i-get-intellisense-to-work-correctly
