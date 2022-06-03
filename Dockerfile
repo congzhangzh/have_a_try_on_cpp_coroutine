@@ -1,3 +1,5 @@
+# Purpose:
+# This mainly for Clion Docker Remote/Docker development mode support, directly Docker is better and modern, some Docker Remote relaed work is mixed as it's the real beginning of trying:)
 FROM debian:testing
 
 #ARG GADGETRON_URL=https://github.com/gadgetron/gadgetron
