@@ -3,6 +3,7 @@ project(coroutines)
 
 set(CMAKE_CXX_STANDARD 23)
 
+#-emit-llvm
 add_compile_options(-stdlib=libstdc++)
 
 # ref: https://twitter.com/lewissbaker/status/1528563836995125248

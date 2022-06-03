@@ -33,14 +33,22 @@ clang++-14 -stdlib=libstdc++ -std=c++2b async_coroutine_example.cpp -lpthread
 
 Use Clion to Remote Toolchain to debug it 
 
-# A firendly way?
+# A friendly way?
 
 Attach VS Code to you container or by dev container?
 
+# How to get llvm ir
+
+```bash
+#ref: https://stackoverflow.com/questions/9148890/how-to-make-clang-compile-to-llvm-ir
+clang++-14 -std=c++2b -stdlib=libstdc++ -S -emit-llvm async_coroutine_example.cpp
+clang++-14 -std=c++2b -stdlib=libstdc++ -S -emit-llvm corodemo.cc
+```
 # Others
 ```bash
 #which not works
-g++ --std=c++2b async_coroutine_example.cpp -fcoroutines
+#g++ --std=c++2b -fcoroutines async_coroutine_example.cpp 
+#clang++ -std=c++2b -fcoroutines-ts corodemo.cc 
 ```
 
 # Ref:
@@ -62,3 +70,5 @@ g++ --std=c++2b async_coroutine_example.cpp -fcoroutines
 16. https://stackoverflow.com/questions/49583381/how-to-debug-a-cmake-make-project-in-vscode
 17. https://vector-of-bool.github.io/docs/vscode-cmake-tools/debugging.html
 18. https://code.visualstudio.com/docs/cpp/faq-cpp#_how-do-i-get-intellisense-to-work-correctly
+19. https://stackoverflow.com/questions/9148890/how-to-make-clang-compile-to-llvm-ir
+20. https://llvm.org/docs/Coroutines.html
